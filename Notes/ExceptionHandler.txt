@@ -1,0 +1,10 @@
+       **********>Exception Handling ***********>
+1. In Java, exception handling is a mechanism that allows a program to detect and respond to runtime errors (called exceptions) in a controlled way, 
+  so that the normal flow of execution can continue without abrupt termination.
+2. Exception will be hanfled in catch block.
+3. One class have single try and multiple catch block.
+4. once exption will happen in perticular line the next line in the try block will not execute, only catch block will execute.
+5. If exption will not handled then application will terminate abnormally.
+6. Whenever any exption will happen first it JVM will get notify about it, then JVM will will serach in that method whether any where it is handled or not , if not then it will chechk where it is called. 
+  If there also its not handled then it will call default exption handler that will terminate application abnormally and giver summary to user.
+

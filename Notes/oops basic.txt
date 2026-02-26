@@ -1,0 +1,119 @@
+                        *********>Inheritance<*******************
+ *Inheritance is a fundamental concept in Java and a key feature of Object-Oriented Programming (OOP). 
+ * It allows one class to inherit the properties and behaviors (fields and methods) of another class
+ * Private variable are not able to inherit
+ * If we want to call specialized methods from parent refernce we need to do down cast parent to child
+ * Whenever any child constructor will call first "super" method will be executed. Use of super method is
+   to call constructor of parent class
+ * this() mehtod is used to call the constructor of same class
+ * We are not able to use super() and this() method at same time  
+ * Parents class will always extends Object class by default
+ * Both static variables and static method get inherited in child class.
+ * Method Hidding: When  we attempt to override static methods in child class then it will become specialized method by hiding inherited static
+ method and we cannot override static method.
+
+
+                         **********>Rules for overriding Methods<************
+1. We cannot decrease the visibility of overriden methods in child class however we can increase 
+2. We cannot change return type of overriden method in child class.
+3. We  can change return type of overriden method in child class if its co-veriated return type.
+(co-veriated meas if there is a "is-a" relationship between return type of overiiden methods.
+4. We cannot change parameter list of overidden method in child class if we change it will be trated as specialized method.
+
+
+                           ***********>Polymorphism<*********** 
+* Polymorphism in Java is one of the core concepts in object-oriented programming (OOP) 
+that allows objects to behave differently based on their specific class type.
+* We can achive it by method overridden and creating a parent class refernce for child class.
+
+                           ***********>Abstract Key<************
+1. In java we can have methods without body/defination.
+and such methods ar called as abstract methods and declared using abstract keyword.
+2. If any one method in class is abstract then it class should be declared as abstract class.
+3. We cannot create object/instance of abstract class.
+4. We can create ref to achive polymorphism.
+5. a class and mehtods can be abstract but variables and constructors are not abstract.
+
+Not: Abstract and Final keyword cannot used at once. Its illigale to use both of them at a time.
+
+                            ***********>Final<*****************
+1. final class cannot be inherited (we cannot inherited from final class)
+2. final methods can be inherited however we cannot override them 
+3. final variable cannot be re iniatialized (nehave as constant)
+
+                          **************>Interface<**************
+1. Keywords in inter
+2.If both interfaces have default methods with the same name, you must explicitly override the method in the implementing class to resolve ambiguity
+--> Interface is a way of specifying the requirement that needs to be implemented
+--> we use interface keyword to create interface in Java
+--> All the methods in Java Interface are by default public and abstract irrespective of you have specified or not
+--> Multiple classes can implement one interface
+--> We cannot create Object/instance of interface
+--> We can create ref of interface to achieve polymorphism
+--> interface helps to achieve standardization
+-->One interface can extends another interface
+--> One interface cannot implement another interface
+--> One class can implement multiple interfaces at a time
+--> A class can extend another class and implement an interface at a time and in this case first extends then implements comes into picture
+--> In an interface we can declare variables however all variables in an interface are public static final by nature;
+--> interface can extend multiple other interfaces
+--> In an interface we can have methods with body and those methods are called as default methods and is declared with default keyword
+--> default methods of an interface gets inherited in implementing classed however its
+not mandatory to override
+--> we can also have static and private methods but these will not be inherited in implementing classes
+
+
+
+			****************>Lambda expression <***************
+1. Functional interface: A interface have only one abstract method.
+ A.Treditional way by implementing interface
+ B. Inner annonymous class: we can directly implement abstract method in main closs without in implementation class. we can use interface as blow
+		FI1 f1=new FI1 (){ method implementation};
+C. LAMBDA EXRESSION :its possible only if interface is functional interface.
+		//(Paramter) ->(body);
+   FI2 f1=(int a,int b)->{
+				int c=a+b;
+				return c;};
+
+
+			******************>ArraY<**********************
+//An array is a collection of elements of the same data type stored in contiguous memory locations
+//studetsId.length  lenght of string is property not method
+//Array demands contigous memory allocation.
+//Arrays are guarded with boundaries.(buffere overloading or arreay out of index)
+//Array stores the address of object
+//Arrays size is fixed if we resize instead of old new array with new size will create.
+
+			******************>String<**********************
+->3 types of string: 1: String(Immutable,nonchangable)
+  2.String Buffer and 3.String Builder these are Mutable(Changable).
+->String is mutable because whenever we change string value its will create new variable but it will not alter existing value.
+-> Whenever we will create string using direct litral that time in heap its created in SCP(String Constant Pool) where duplicates will not allowed.
+ for ex: str1="veena"; str2="veena". in this both str1 and str2 are refering to same .thir address is same.
+-> String is case sensitive.
+-> Whenever we will create string using new keyord it will create different object for both.
+for ex: str1=new String("veena"); str2=new String("veena");
+int this example both str1 and str2 are pointing to different address and have different reference.
+
+Imp Methods:
+  * == (check references)
+  * equals (string data)
+  * equalIgnoreCase() (string data by ignoring case sensitivity .
+  * compareTo (string data char by char).
+
+			******************>String Buffer and String Builder<**********************
+ //StringBuffer,StringBuilder are immutable string means we can change the value of string without changing object. 
+//String buffer will not support multiThreading but StringBuilder will support.
+// StartingCapacity  of string builder and buffer is 16
+//new size=older size*2+2
+// .equals will not compare here.. its compare referenses.
+// var aregs will allow giing dynamic arguments during method call.
+  			 
+		******************>Wrapper Class<**********************
+//Boxing Primitive data type to object
+// unboxing: ObjectType to primitive data types;
+//java will not support this type of boxing now
+//converting 10 primitive type to object(Boxing). int -->Integer
+//Interger -->int. Premitive to object Unboxing
+
+
