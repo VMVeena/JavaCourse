@@ -7,4 +7,11 @@
 5. If exption will not handled then application will terminate abnormally.
 6. Whenever any exption will happen first it JVM will get notify about it, then JVM will will serach in that method whether any where it is handled or not , if not then it will chechk where it is called. 
   If there also its not handled then it will call default exption handler that will terminate application abnormally and giver summary to user.
+7. Wnenver we wanted to throw excption to where it is calling even though after its handling  then we use "throw" keyword inside catch block.
+8. Once the throw line is executed next lines will not execute. Excption will come to where method is called and there alos we need to handle this excption.(throw keyword will act as return statement)
+9. If we want to inform about caller of the method about excption then we will use "throws" keyword. "throws" will not handle exception, its simply inform about exption may happen.
+10. We can use "finally" block if we want to run the perticular block iirespective of whether excption is happened or not, or it is handled or not.
+11. finally block we can use with only try block ,with try cath finally also.
+12. Most of cases like if we want to close DB connection, file or some connection to be close there we will use finally block.
+
 
