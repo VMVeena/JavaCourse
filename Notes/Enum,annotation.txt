@@ -1,0 +1,61 @@
+Enum***********
+*Its a special data type used to define a fixed set of constants.
+* Its a group of constants where variable and value is one.
+*Enum constants are itself variable and value.
+*Wnever we will create enum by default it will create the class with name which enum was created.
+*And also it will create number of object equal to number of constants present in the enum.
+
+
+************Annotation*************
+*Annotations are special notes you add to your Java code. They start with the @ symbol.
+*They don't change how your program runs, but they give extra information to the compiler or tools.
+* We will create our own annotation by @interface <AnnotationName>.Note: @interface is not refer to interface here.it refer to annotation.
+*If we,java team or spring boot teeam need to create  new annotation we have to use  2 meta annotation.
+
+//Service=component + extra message that its business logic
+//Repository=component + extra message that its db logic
+1. @Retention(RetentionPolicy.RUNTIME) :Capacity of annotation, to which it will go like to compiler,jvm or to spring etc.
+2. @Target(ElementType.TYPE): Where it need to apply, whether to class,method, variable,class,interface etc.TYPE means class only.
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.TYPE, ElementType.METHOD})
+@interface CricketPalayer
+{
+	//String country();//country is variable not method.
+	String country() default "India";  //if we either give or not it must have default value
+	}
+
+@CricketPalayer(country="India")
+class RohitSharma
+{
+	private int innings;
+	public int getInnings() {
+		return innings;
+	}
+	@CricketPalayer()//if we either give or not as it is have default value
+	public void setInnings(int innings) {
+		this.innings = innings;
+	}
+
+
+************Time*************
+import java.time.LocalTime;
+
+
+//LocalDate is a datetime API created by JODA organization
+public class LaunchTimeandDate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LocalDate date=LocalDate.now();
+		System.out.println(date);
+		LocalDate dob=LocalDate.of(1994,12,20);
+		System.out.println(dob);
+		System.out.println(date.getMonthValue());
+		LocalTime time=LocalTime.now();
+		System.out.println(time);
+		
+		LocalDateTime datetime=LocalDateTime.now();
+		System.out.println(datetime);
+		System.out.println(datetime.getDayOfMonth());
+	}
