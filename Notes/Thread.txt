@@ -1,0 +1,13 @@
+A Java thread is the smallest unit of execution within a program..
+* We will create thread in 2 ways. either by extending Thread Method or by implementing  Runnable interface.
+Need to create object od thread class.
+thread.start(). ->will give life to thread
+thread.run(). ->inside this method need to mention what activity need to be done
+*Single run method can manage multiple thread
+*Single class, single run method, 3 threads
+*Sychronised Thread:
+ If only one resource is ther and we want to restrict one thread need to use that resouse at a time then we will lock that resource by sychronised key.
+* In Synchronised thread even if ther is a delay at a time only one thread will execute.
+* But we are not able to set which thread will execute, it be decided by jvm.
+*In String builder multiple thread will operate, because its not sychronised.
+*In String buffer is not multiple thread, because its sychronised.
